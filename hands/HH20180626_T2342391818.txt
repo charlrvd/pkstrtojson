@@ -1,0 +1,620 @@
+﻿okerStars Hand #188081637940: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level I (10/20) - 2018/06/26 23:14:23 ET
+Table '2342391818 1' 4-max Seat #1 is the button
+Seat 1: PlayerQWE (500 in chips) 
+Seat 2: PlayerADS (500 in chips) 
+Seat 3: PlayerZXC (500 in chips) 
+Seat 4: MyPlayerName (500 in chips) 
+PlayerADS: posts small blind 10
+PlayerZXC: posts big blind 20
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Qs 3d]
+MyPlayerName: folds 
+PlayerQWE: folds 
+PlayerADS: folds 
+Uncalled bet (10) returned to PlayerZXC
+PlayerZXC collected 20 from pot
+PlayerZXC: doesn't show hand 
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: PlayerQWE (button) folded before Flop (didn't bet)
+Seat 2: PlayerADS (small blind) folded before Flop
+Seat 3: PlayerZXC (big blind) collected (20)
+Seat 4: MyPlayerName folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081640161: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level I (10/20) - 2018/06/26 23:14:32 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 1: PlayerQWE (500 in chips) 
+Seat 2: PlayerADS (490 in chips) 
+Seat 3: PlayerZXC (510 in chips) 
+Seat 4: MyPlayerName (500 in chips) 
+PlayerZXC: posts small blind 10
+MyPlayerName: posts big blind 20
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Th 8s]
+PlayerQWE: raises 20 to 40
+PlayerADS: calls 40
+PlayerZXC: calls 30
+MyPlayerName: calls 20
+*** FLOP *** [3c Ad 7c]
+PlayerZXC: checks 
+MyPlayerName: checks 
+PlayerQWE: bets 80
+PlayerADS: raises 80 to 160
+PlayerZXC: folds 
+MyPlayerName: folds 
+PlayerQWE: calls 80
+*** TURN *** [3c Ad 7c] [Ah]
+PlayerQWE: checks 
+PlayerADS: checks 
+*** RIVER *** [3c Ad 7c Ah] [5h]
+PlayerQWE: checks 
+PlayerADS: bets 290 and is all-in
+PlayerQWE: calls 290
+*** SHOW DOWN ***
+PlayerADS: shows [4c Ac] (three of a kind, Aces)
+PlayerQWE: shows [7h 6h] (two pair, Aces and Sevens)
+PlayerADS collected 1060 from pot
+*** SUMMARY ***
+Total pot 1060 | Rake 0 
+Board [3c Ad 7c Ah 5h]
+Seat 1: PlayerQWE showed [7h 6h] and lost with two pair, Aces and Sevens
+Seat 2: PlayerADS (button) showed [4c Ac] and won (1060) with three of a kind, Aces
+Seat 3: PlayerZXC (small blind) folded on the Flop
+Seat 4: MyPlayerName (big blind) folded on the Flop
+
+
+
+PokerStars Hand #188081654608: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level I (10/20) - 2018/06/26 23:15:29 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 1: PlayerQWE (10 in chips) 
+Seat 2: PlayerADS (1060 in chips) 
+Seat 3: PlayerZXC (470 in chips) 
+Seat 4: MyPlayerName (460 in chips) 
+MyPlayerName: posts small blind 10
+PlayerQWE: posts big blind 10 and is all-in
+*** HOLE CARDS ***
+Dealt to MyPlayerName [6c Ts]
+PlayerADS: folds 
+PlayerZXC: folds 
+*** FLOP *** [6h Th Jh]
+*** TURN *** [6h Th Jh] [9h]
+*** RIVER *** [6h Th Jh 9h] [As]
+*** SHOW DOWN ***
+MyPlayerName: shows [6c Ts] (two pair, Tens and Sixes)
+PlayerQWE: shows [8h 5s] (a flush, Jack high)
+PlayerQWE collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Board [6h Th Jh 9h As]
+Seat 1: PlayerQWE (big blind) showed [8h 5s] and won (20) with a flush, Jack high
+Seat 2: PlayerADS folded before Flop (didn't bet)
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) showed [6c Ts] and lost with two pair, Tens and Sixes
+
+
+
+PokerStars Hand #188081658835: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level I (10/20) - 2018/06/26 23:15:47 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 1: PlayerQWE (20 in chips) 
+Seat 2: PlayerADS (1060 in chips) 
+Seat 3: PlayerZXC (470 in chips) 
+Seat 4: MyPlayerName (450 in chips) 
+PlayerQWE: posts small blind 10
+PlayerADS: posts big blind 20
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Kc 7d]
+PlayerZXC: folds 
+MyPlayerName: raises 20 to 40
+PlayerQWE: calls 10 and is all-in
+PlayerADS: folds 
+Uncalled bet (20) returned to MyPlayerName
+*** FLOP *** [Ah Qd 6c]
+*** TURN *** [Ah Qd 6c] [Qs]
+*** RIVER *** [Ah Qd 6c Qs] [7h]
+*** SHOW DOWN ***
+PlayerQWE: shows [Ks Ac] (two pair, Aces and Queens)
+MyPlayerName: shows [Kc 7d] (two pair, Queens and Sevens)
+PlayerQWE collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [Ah Qd 6c Qs 7h]
+Seat 1: PlayerQWE (small blind) showed [Ks Ac] and won (60) with two pair, Aces and Queens
+Seat 2: PlayerADS (big blind) folded before Flop
+Seat 3: PlayerZXC folded before Flop (didn't bet)
+Seat 4: MyPlayerName (button) showed [Kc 7d] and lost with two pair, Queens and Sevens
+
+
+
+PokerStars Hand #188081665860: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level II (15/30) - 2018/06/26 23:16:15 ET
+Table '2342391818 1' 4-max Seat #1 is the button
+Seat 1: PlayerQWE (60 in chips) 
+Seat 2: PlayerADS (1040 in chips) 
+Seat 3: PlayerZXC (470 in chips) 
+Seat 4: MyPlayerName (430 in chips) 
+PlayerADS: posts small blind 15
+PlayerZXC: posts big blind 30
+*** HOLE CARDS ***
+Dealt to MyPlayerName [3h Qh]
+MyPlayerName: folds 
+PlayerQWE: raises 30 to 60 and is all-in
+PlayerADS: folds 
+PlayerZXC: folds 
+Uncalled bet (30) returned to PlayerQWE
+PlayerQWE collected 75 from pot
+*** SUMMARY ***
+Total pot 75 | Rake 0 
+Seat 1: PlayerQWE (button) collected (75)
+Seat 2: PlayerADS (small blind) folded before Flop
+Seat 3: PlayerZXC (big blind) folded before Flop
+Seat 4: MyPlayerName folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081670431: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level II (15/30) - 2018/06/26 23:16:34 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 1: PlayerQWE (105 in chips) 
+Seat 2: PlayerADS (1025 in chips) 
+Seat 3: PlayerZXC (440 in chips) 
+Seat 4: MyPlayerName (430 in chips) 
+PlayerZXC: posts small blind 15
+MyPlayerName: posts big blind 30
+*** HOLE CARDS ***
+Dealt to MyPlayerName [6h Jc]
+PlayerQWE: raises 75 to 105 and is all-in
+PlayerADS: folds 
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (75) returned to PlayerQWE
+PlayerQWE collected 75 from pot
+*** SUMMARY ***
+Total pot 75 | Rake 0 
+Seat 1: PlayerQWE collected (75)
+Seat 2: PlayerADS (button) folded before Flop (didn't bet)
+Seat 3: PlayerZXC (small blind) folded before Flop
+Seat 4: MyPlayerName (big blind) folded before Flop
+
+
+
+PokerStars Hand #188081672708: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level II (15/30) - 2018/06/26 23:16:43 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 1: PlayerQWE (150 in chips) 
+Seat 2: PlayerADS (1025 in chips) 
+Seat 3: PlayerZXC (425 in chips) 
+Seat 4: MyPlayerName (400 in chips) 
+MyPlayerName: posts small blind 15
+PlayerQWE: posts big blind 30
+*** HOLE CARDS ***
+Dealt to MyPlayerName [3d 8h]
+PlayerADS: folds 
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (15) returned to PlayerQWE
+PlayerQWE collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | Rake 0 
+Seat 1: PlayerQWE (big blind) collected (30)
+Seat 2: PlayerADS folded before Flop (didn't bet)
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) folded before Flop
+
+
+
+PokerStars Hand #188081675344: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level II (15/30) - 2018/06/26 23:16:54 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 1: PlayerQWE (165 in chips) 
+Seat 2: PlayerADS (1025 in chips) 
+Seat 3: PlayerZXC (425 in chips) 
+Seat 4: MyPlayerName (385 in chips) 
+PlayerQWE: posts small blind 15
+PlayerADS: posts big blind 30
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Ah Js]
+PlayerZXC: folds 
+MyPlayerName: raises 30 to 60
+PlayerQWE: raises 105 to 165 and is all-in
+PlayerADS: folds 
+MyPlayerName: calls 105
+*** FLOP *** [3d Ks 3h]
+*** TURN *** [3d Ks 3h] [Jd]
+*** RIVER *** [3d Ks 3h Jd] [6c]
+*** SHOW DOWN ***
+PlayerQWE: shows [9d Ad] (a pair of Threes)
+MyPlayerName: shows [Ah Js] (two pair, Jacks and Threes)
+MyPlayerName collected 360 from pot
+PlayerQWE finished the tournament in 4th place
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Board [3d Ks 3h Jd 6c]
+Seat 1: PlayerQWE (small blind) showed [9d Ad] and lost with a pair of Threes
+Seat 2: PlayerADS (big blind) folded before Flop
+Seat 3: PlayerZXC folded before Flop (didn't bet)
+Seat 4: MyPlayerName (button) showed [Ah Js] and won (360) with two pair, Jacks and Threes
+
+
+
+PokerStars Hand #188081683408: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level III (20/40) - 2018/06/26 23:17:27 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 2: PlayerADS (995 in chips) 
+Seat 3: PlayerZXC (425 in chips) 
+Seat 4: MyPlayerName (580 in chips) 
+PlayerZXC: posts small blind 20
+MyPlayerName: posts big blind 40
+*** HOLE CARDS ***
+Dealt to MyPlayerName [3h 4c]
+PlayerADS: calls 40
+PlayerZXC: calls 20
+MyPlayerName: checks 
+*** FLOP *** [Ac Qc 9h]
+PlayerZXC: checks 
+MyPlayerName: checks 
+PlayerADS: bets 40
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (40) returned to PlayerADS
+PlayerADS collected 120 from pot
+PlayerADS: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Ac Qc 9h]
+Seat 2: PlayerADS (button) collected (120)
+Seat 3: PlayerZXC (small blind) folded on the Flop
+Seat 4: MyPlayerName (big blind) folded on the Flop
+
+
+
+PokerStars Hand #188081690747: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level III (20/40) - 2018/06/26 23:17:56 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 2: PlayerADS (1075 in chips) 
+Seat 3: PlayerZXC (385 in chips) 
+Seat 4: MyPlayerName (540 in chips) 
+MyPlayerName: posts small blind 20
+PlayerADS: posts big blind 40
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Kc Js]
+PlayerZXC: folds 
+MyPlayerName: raises 40 to 80
+PlayerADS: calls 40
+*** FLOP *** [Tc 6h 7s]
+MyPlayerName: bets 80
+PlayerADS: calls 80
+*** TURN *** [Tc 6h 7s] [Jh]
+MyPlayerName: bets 120
+PlayerADS: calls 120
+*** RIVER *** [Tc 6h 7s Jh] [Ks]
+MyPlayerName: bets 260 and is all-in
+PlayerADS: calls 260
+*** SHOW DOWN ***
+MyPlayerName: shows [Kc Js] (two pair, Kings and Jacks)
+PlayerADS: shows [Qd Jd] (a pair of Jacks)
+MyPlayerName collected 1080 from pot
+*** SUMMARY ***
+Total pot 1080 | Rake 0 
+Board [Tc 6h 7s Jh Ks]
+Seat 2: PlayerADS (big blind) showed [Qd Jd] and lost with a pair of Jacks
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) showed [Kc Js] and won (1080) with two pair, Kings and Jacks
+
+
+
+PokerStars Hand #188081701009: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level III (20/40) - 2018/06/26 23:18:38 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 2: PlayerADS (535 in chips) 
+Seat 3: PlayerZXC (385 in chips) 
+Seat 4: MyPlayerName (1080 in chips) 
+PlayerADS: posts small blind 20
+PlayerZXC: posts big blind 40
+*** HOLE CARDS ***
+Dealt to MyPlayerName [3h Jd]
+MyPlayerName: folds 
+PlayerADS: folds 
+Uncalled bet (20) returned to PlayerZXC
+PlayerZXC collected 40 from pot
+PlayerZXC: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 2: PlayerADS (small blind) folded before Flop
+Seat 3: PlayerZXC (big blind) collected (40)
+Seat 4: MyPlayerName (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081702548: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level III (20/40) - 2018/06/26 23:18:44 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 2: PlayerADS (515 in chips) 
+Seat 3: PlayerZXC (405 in chips) 
+Seat 4: MyPlayerName (1080 in chips) 
+PlayerZXC: posts small blind 20
+MyPlayerName: posts big blind 40
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Th Kd]
+PlayerADS: folds 
+PlayerZXC: folds 
+Uncalled bet (20) returned to MyPlayerName
+MyPlayerName collected 40 from pot
+MyPlayerName: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 2: PlayerADS (button) folded before Flop (didn't bet)
+Seat 3: PlayerZXC (small blind) folded before Flop
+Seat 4: MyPlayerName (big blind) collected (40)
+
+
+
+PokerStars Hand #188081704471: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level IV (30/60) - 2018/06/26 23:18:52 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 2: PlayerADS (515 in chips) 
+Seat 3: PlayerZXC (385 in chips) 
+Seat 4: MyPlayerName (1100 in chips) 
+MyPlayerName: posts small blind 30
+PlayerADS: posts big blind 60
+*** HOLE CARDS ***
+Dealt to MyPlayerName [4c 7s]
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (30) returned to PlayerADS
+PlayerADS collected 60 from pot
+PlayerADS: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 2: PlayerADS (big blind) collected (60)
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) folded before Flop
+
+
+
+PokerStars Hand #188081705921: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level IV (30/60) - 2018/06/26 23:18:58 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 2: PlayerADS (545 in chips) 
+Seat 3: PlayerZXC (385 in chips) 
+Seat 4: MyPlayerName (1070 in chips) 
+PlayerADS: posts small blind 30
+PlayerZXC: posts big blind 60
+*** HOLE CARDS ***
+Dealt to MyPlayerName [2s Qs]
+MyPlayerName: folds 
+PlayerADS: calls 30
+PlayerZXC: checks 
+*** FLOP *** [7s 6s As]
+PlayerADS: checks 
+PlayerZXC: bets 325 and is all-in
+PlayerADS: folds 
+Uncalled bet (325) returned to PlayerZXC
+PlayerZXC collected 120 from pot
+PlayerZXC: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [7s 6s As]
+Seat 2: PlayerADS (small blind) folded on the Flop
+Seat 3: PlayerZXC (big blind) collected (120)
+Seat 4: MyPlayerName (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081710797: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level IV (30/60) - 2018/06/26 23:19:18 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 2: PlayerADS (485 in chips) 
+Seat 3: PlayerZXC (445 in chips) 
+Seat 4: MyPlayerName (1070 in chips) 
+PlayerZXC: posts small blind 30
+MyPlayerName: posts big blind 60
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Tc Ks]
+PlayerADS: raises 425 to 485 and is all-in
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (425) returned to PlayerADS
+PlayerADS collected 150 from pot
+PlayerADS: doesn't show hand 
+*** SUMMARY ***
+Total pot 150 | Rake 0 
+Seat 2: PlayerADS (button) collected (150)
+Seat 3: PlayerZXC (small blind) folded before Flop
+Seat 4: MyPlayerName (big blind) folded before Flop
+
+
+
+PokerStars Hand #188081713382: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level IV (30/60) - 2018/06/26 23:19:29 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 2: PlayerADS (575 in chips) 
+Seat 3: PlayerZXC (415 in chips) 
+Seat 4: MyPlayerName (1010 in chips) 
+MyPlayerName: posts small blind 30
+PlayerADS: posts big blind 60
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Jc 9c]
+PlayerZXC: folds 
+MyPlayerName: raises 60 to 120
+PlayerADS: folds 
+Uncalled bet (60) returned to MyPlayerName
+MyPlayerName collected 120 from pot
+MyPlayerName: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 2: PlayerADS (big blind) folded before Flop
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) collected (120)
+
+
+
+PokerStars Hand #188081716114: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level V (40/80) - 2018/06/26 23:19:40 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 2: PlayerADS (515 in chips) 
+Seat 3: PlayerZXC (415 in chips) 
+Seat 4: MyPlayerName (1070 in chips) 
+PlayerADS: posts small blind 40
+PlayerZXC: posts big blind 80
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Tc 5d]
+MyPlayerName: folds 
+PlayerADS: raises 435 to 515 and is all-in
+PlayerZXC: folds 
+Uncalled bet (435) returned to PlayerADS
+PlayerADS collected 160 from pot
+PlayerADS: doesn't show hand 
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 2: PlayerADS (small blind) collected (160)
+Seat 3: PlayerZXC (big blind) folded before Flop
+Seat 4: MyPlayerName (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081719860: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level V (40/80) - 2018/06/26 23:19:56 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 2: PlayerADS (595 in chips) 
+Seat 3: PlayerZXC (335 in chips) 
+Seat 4: MyPlayerName (1070 in chips) 
+PlayerZXC: posts small blind 40
+MyPlayerName: posts big blind 80
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Td 7h]
+PlayerADS: folds 
+PlayerZXC: raises 255 to 335 and is all-in
+MyPlayerName: folds 
+Uncalled bet (255) returned to PlayerZXC
+PlayerZXC collected 160 from pot
+PlayerZXC: doesn't show hand 
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 2: PlayerADS (button) folded before Flop (didn't bet)
+Seat 3: PlayerZXC (small blind) collected (160)
+Seat 4: MyPlayerName (big blind) folded before Flop
+
+
+
+PokerStars Hand #188081722207: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level V (40/80) - 2018/06/26 23:20:05 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 2: PlayerADS (595 in chips) 
+Seat 3: PlayerZXC (415 in chips) 
+Seat 4: MyPlayerName (990 in chips) 
+MyPlayerName: posts small blind 40
+PlayerADS: posts big blind 80
+*** HOLE CARDS ***
+Dealt to MyPlayerName [4s 9s]
+PlayerZXC: folds 
+MyPlayerName: folds 
+Uncalled bet (40) returned to PlayerADS
+PlayerADS collected 80 from pot
+PlayerADS: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 2: PlayerADS (big blind) collected (80)
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) folded before Flop
+
+
+
+PokerStars Hand #188081724772: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level VI (50/100) - 2018/06/26 23:20:16 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 2: PlayerADS (635 in chips) 
+Seat 3: PlayerZXC (415 in chips) 
+Seat 4: MyPlayerName (950 in chips) 
+PlayerADS: posts small blind 50
+PlayerZXC: posts big blind 100
+*** HOLE CARDS ***
+Dealt to MyPlayerName [5c 6c]
+MyPlayerName: folds 
+PlayerADS: calls 50
+PlayerZXC: raises 315 to 415 and is all-in
+PlayerADS: calls 315
+*** FLOP *** [6h 7d 2d]
+*** TURN *** [6h 7d 2d] [Ks]
+*** RIVER *** [6h 7d 2d Ks] [Qd]
+*** SHOW DOWN ***
+PlayerADS: shows [Ah Js] (high card Ace)
+PlayerZXC: shows [Td Tc] (a pair of Tens)
+PlayerZXC collected 830 from pot
+*** SUMMARY ***
+Total pot 830 | Rake 0 
+Board [6h 7d 2d Ks Qd]
+Seat 2: PlayerADS (small blind) showed [Ah Js] and lost with high card Ace
+Seat 3: PlayerZXC (big blind) showed [Td Tc] and won (830) with a pair of Tens
+Seat 4: MyPlayerName (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #188081730196: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level VI (50/100) - 2018/06/26 23:20:38 ET
+Table '2342391818 1' 4-max Seat #2 is the button
+Seat 2: PlayerADS (220 in chips) 
+Seat 3: PlayerZXC (830 in chips) 
+Seat 4: MyPlayerName (950 in chips) 
+PlayerZXC: posts small blind 50
+MyPlayerName: posts big blind 100
+*** HOLE CARDS ***
+Dealt to MyPlayerName [3s 8c]
+PlayerADS: folds 
+PlayerZXC: raises 100 to 200
+MyPlayerName: folds 
+Uncalled bet (100) returned to PlayerZXC
+PlayerZXC collected 200 from pot
+PlayerZXC: doesn't show hand 
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 2: PlayerADS (button) folded before Flop (didn't bet)
+Seat 3: PlayerZXC (small blind) collected (200)
+Seat 4: MyPlayerName (big blind) folded before Flop
+
+
+
+PokerStars Hand #188081733416: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level VI (50/100) - 2018/06/26 23:20:51 ET
+Table '2342391818 1' 4-max Seat #3 is the button
+Seat 2: PlayerADS (220 in chips) 
+Seat 3: PlayerZXC (930 in chips) 
+Seat 4: MyPlayerName (850 in chips) 
+MyPlayerName: posts small blind 50
+PlayerADS: posts big blind 100
+*** HOLE CARDS ***
+Dealt to MyPlayerName [Ah Ac]
+PlayerZXC: folds 
+MyPlayerName: raises 750 to 850 and is all-in
+PlayerADS: calls 120 and is all-in
+Uncalled bet (630) returned to MyPlayerName
+*** FLOP *** [Tc 9c 6s]
+*** TURN *** [Tc 9c 6s] [Ts]
+*** RIVER *** [Tc 9c 6s Ts] [6d]
+*** SHOW DOWN ***
+MyPlayerName: shows [Ah Ac] (two pair, Aces and Tens)
+PlayerADS: shows [7h 8h] (a straight, Six to Ten)
+PlayerADS collected 440 from pot
+*** SUMMARY ***
+Total pot 440 | Rake 0 
+Board [Tc 9c 6s Ts 6d]
+Seat 2: PlayerADS (big blind) showed [7h 8h] and won (440) with a straight, Six to Ten
+Seat 3: PlayerZXC (button) folded before Flop (didn't bet)
+Seat 4: MyPlayerName (small blind) showed [Ah Ac] and lost with two pair, Aces and Tens
+
+
+
+PokerStars Hand #188081740223: Tournament #2342391818, $0.91+$0.09 USD Hold'em No Limit - Level VII (100/200) - 2018/06/26 23:21:18 ET
+Table '2342391818 1' 4-max Seat #4 is the button
+Seat 2: PlayerADS (440 in chips) 
+Seat 3: PlayerZXC (930 in chips) 
+Seat 4: MyPlayerName (630 in chips) 
+PlayerADS: posts the ante 440 and is all-in
+PlayerZXC: posts the ante 930 and is all-in
+MyPlayerName: posts the ante 630 and is all-in
+*** HOLE CARDS ***
+Dealt to MyPlayerName [7c Qd]
+*** FLOP *** [3d 6s Jc]
+*** TURN *** [3d 6s Jc] [Ah]
+*** RIVER *** [3d 6s Jc Ah] [As]
+*** SHOW DOWN ***
+PlayerZXC: shows [6c Qh] (two pair, Aces and Sixes)
+PlayerZXC collected 300 from side pot-2 
+MyPlayerName: shows [7c Qd] (a pair of Aces)
+PlayerZXC collected 380 from side pot-1 
+PlayerADS: shows [4h 6d] (two pair, Aces and Sixes - lower kicker)
+PlayerZXC collected 1320 from main pot
+MyPlayerName finished the tournament in 2nd place
+PlayerADS finished the tournament in 3rd place
+*** SUMMARY ***
+Total pot 2000 Main pot 1320. Side pot-1 380. Side pot-2 300. | Rake 0 
+Board [3d 6s Jc Ah As]
+Seat 2: PlayerADS showed [4h 6d] and lost with two pair, Aces and Sixes
+Seat 3: PlayerZXC showed [6c Qh] and won (2000) with two pair, Aces and Sixes
+Seat 4: MyPlayerName (button) showed [7c Qd] and lost with a pair of Aces
+
+
+
