@@ -1,6 +1,13 @@
 import os
 import re
 import json
+import pymongo
+from pymongo import MongoClient
+from pymongo.collection import Collection
+
+# DB create connexion
+client = MongoClient('localhost', 81)
+db = client.pokertest
 
 # will use below for bulk
 #files = [f for f in os.listdir('handshistory')
@@ -18,7 +25,7 @@ f_in = "HH20180626_T2342391818.txt"
 # regex with original name
 #game_name = re.search(r'^.*? (.*).txt', f_in).group(1)
 game_name = re.search(r'^.*_(.*)\.txt$', f_in).group(1)
-parse_res['Game'] = game_name
+#parse_res['Game'] = game_name
 parse_res['hands'] = []
 
 # regex used later on
@@ -43,7 +50,8 @@ def process_hand(li):
     parse_hand = {}
     # parsing hand ID
     hand_n = re.search(r'^.*Hand #(\d+): .*$', li[0]).group(1)
-    parse_hand['id'] = hand_n
+    parse_hand['_id'] = hand_n
+    parse_hand['game_id'] = game_name
     # parsing button position
     button = re.search(r'^.*#(\d).*$', li[1]).group(1)
     parse_hand['Button'] = button
@@ -105,7 +113,7 @@ def process_hand(li):
         flop.append(li[i])
         i += 1
     parse_hand['flop'] = parse_action('flop', flop)
-    parse_hand['flop'].append({'dealt_cards': dealt_cards})
+    parse_hand['flop'].append({'card': dealt_cards})
 
     # parsing TURN
     try:
@@ -120,7 +128,7 @@ def process_hand(li):
         turn.append(li[i])
         i += 1
     parse_hand['turn'] = parse_action('turn', turn)
-    parse_hand['turn'].append({'turn_card': turn_card})
+    parse_hand['turn'].append({'card': turn_card})
 
     # parsing RIVER
     try:
@@ -135,7 +143,7 @@ def process_hand(li):
         river.append(li[i])
         i += 1
     parse_hand['river'] = parse_action('river', river)
-    parse_hand['river'].append({'turn_card': river_card})
+    parse_hand['river'].append({'card': river_card})
 
     # parsing SHOWDOWN
     i += 1
@@ -180,6 +188,9 @@ def parse_showdown(showdown):
             show['player'] = f.group(1)
             show['finish'] = True
             show['place'] = f.group(2)
+        if not show:
+            show["error"] = "parse did not work for showdown line"
+            show["line"] = line
         show_list.append(show)
     return show_list
 
@@ -205,7 +216,7 @@ def parse_action(action_name, action_list):
     # callected from pot
     # no show
     for action in action_list:
-        act = {'id': action_id}
+        act = {}
         if re.match(check, action) and action_name != 'preflop':
             f = re.search(check, action)
             act['player'] = f.group(1)
@@ -261,6 +272,10 @@ def parse_action(action_name, action_list):
             f = re.search(noshow, action)
             act['player'] = f.group(1)
             act['cards'] = 'NoShow'
+        if not action:
+            act["error"] = "parse did not work for action line"
+            act["line"] = action
+        act['id'] = action_id
         action_id += 1
         parsed_action.append(act)
     return parsed_action
@@ -308,4 +323,13 @@ for line in [x for x in open_f.split('\n')]:
         hand.append(line)
 #print('done')
 
-print(json.dumps(parse_res))
+#print(json.dumps(parse_res['hands']))
+#for hand in parse_res['hands']:
+#    print(hand)
+#    print('##############################')
+try:
+    db.pokertest.insert_many(
+            parse_res['hands']
+    )
+except pymongo.errors.BulkWriteError:
+    print('Duplicate id already in use ' + parse_res['hands'][0]['game_id'])
