@@ -3,6 +3,7 @@ import pymongo
 from pymongo import MongoClient
 from pymongo.collection import Collection
 from settings import Settings
+from player import Player
 
 class Pokerstarsgame:
     def __init__(self, gamelog, game=None, game_filename=None):
@@ -18,6 +19,7 @@ class Pokerstarsgame:
         self.gamelog = gamelog
         self.hands = []
         self.hands_id = []
+        self.players = {} # player objects
         self.init_mongo = False
         if re.match(r'^.*\$([\d\.]+)\+\$([\d\.]+) USD.*$', gamelog[0]):
             price = re.search(r'^.*\$([\d\.]+)\+\$([\d\.]+) USD.*$',
@@ -68,8 +70,12 @@ class Pokerstarsgame:
             player['seat'] = p.group(1)
             parse_hand['players'].append(player)
             i += 1
-        # store player list for later use
+        # store player list
         player_list = [p['name'] for p in parse_hand['players']]
+        # update player object list if needed or create it
+        for p in player_list:
+            if not p in self.players.keys():
+                self.players[p] = Player(p)
         # parsing deal action
         # blinds
         parse_hand['ante'] = []
@@ -100,7 +106,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             preflop.append(log[i])
             i += 1
-        parse_hand['preflop'] = self._parse_action('preflop', preflop)
+        parse_hand['preflop'] = self._parse_action('preflop', preflop, len(player_list))
 
         # parsing FLOP
         try:
@@ -114,7 +120,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             flop.append(log[i])
             i += 1
-        parse_hand['flop'] = self._parse_action('flop', flop)
+        parse_hand['flop'] = self._parse_action('flop', flop, len(player_list))
         parse_hand['flop'].append({'card': dealt_cards})
 
         # parsing TURN
@@ -129,7 +135,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             turn.append(log[i])
             i += 1
-        parse_hand['turn'] = self._parse_action('turn', turn)
+        parse_hand['turn'] = self._parse_action('turn', turn, len(player_list))
         parse_hand['turn'].append({'card': turn_card})
 
         # parsing RIVER
@@ -144,10 +150,14 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             river.append(log[i])
             i += 1
-        parse_hand['river'] = self._parse_action('river', river)
+        parse_hand['river'] = self._parse_action('river', river, len(player_list))
         parse_hand['river'].append({'card': river_card})
 
         # parsing SHOWDOWN
+        if re.match(r'^\*\*\* SUMMARY \*\*\*.*$', log[i]):
+            summary = log[i+1:]
+            parse_hand['summary'] = self._parse_summary(summary)
+            return parse_hand
         i += 1
         showdown = []
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
@@ -187,7 +197,9 @@ class Pokerstarsgame:
             show_list.append(show)
         return show_list
 
-    def _parse_action(self, action_name, action_list):
+    def _parse_action(self, action_name, action_list, player_nb):
+        # need to add number of player to keep track of tour de table
+        # pour calculer les pfr vpip etc...
         """
         function to parse lines the line for
         preflop, flop, turn, river
@@ -214,11 +226,15 @@ class Pokerstarsgame:
                 f = re.search(self.check, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
+                # update player
+                self.players[f.group(1)].update('check', action_name)
             elif re.match(self.bet, action) and action_name != 'preflop':
                 f = re.search(self.bet, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
                 act['chips'] = f.group(3)
+                # update player
+                self.players[f.group(1)].update('bet', action_name)
             elif re.match(self.fold, action):
                 f = re.search(self.fold, action)
                 act['player'] = f.group(1)
@@ -229,17 +245,23 @@ class Pokerstarsgame:
                 act['action'] = f.group(2)
                 act['chips'] = f.group(3)
                 act['chiptotal'] = f.group(4)
+                # update player
+                self.players[f.group(1)].update('raise', action_name)
             elif re.match(self.call, action):
                 f = re.search(self.call, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
                 act['chiptotal'] = f.group(3)
+                # update player
+                self.players[f.group(1)].update('call', action_name)
             elif re.match(self.betai, action):
                 f = re.search(self.betai, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
                 act['chips'] = f.group(3)
                 act['all-in'] = True
+                # update player
+                self.players[f.group(1)].update('betallin', action_name)
             elif re.match(self.raisai, action):
                 f = re.search(self.raisai, action)
                 act['player'] = f.group(1)
@@ -247,12 +269,16 @@ class Pokerstarsgame:
                 act['chips'] = f.group(3)
                 act['chiptotal'] = f.group(4)
                 act['all-in'] = True
+                # update player
+                self.players[f.group(1)].update('raiseallin', action_name)
             elif re.match(self.callai, action):
                 f = re.search(self.callai, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
                 act['chiptotal'] = f.group(3)
                 act['all-in'] = True
+                # update player
+                self.players[f.group(1)].update('callallin', action_name)
             elif re.match(self.unclbt, action):
                 f = re.search(self.unclbt, action)
                 act['player'] = f.group(2)
@@ -322,6 +348,15 @@ class Pokerstarsgame:
 
     def get_hands_number(self):
         return len(self.hands)
+
+    def get_players_infos(self):
+        r = {}
+        for name, obj in self.players.items():
+            pfr = obj.get_pfr() * 100
+            vpip = obj.get_vpip() * 100
+            r[name] = {'pfr': '{:.2f}'.format(pfr),
+                       'vpip': '{:.2f}'.format(vpip)}
+        return r
 
     def get_game_infos(self, out_json=True):
         gameid = int(re.search(r'(\d+)', self.game_id).group(1))
