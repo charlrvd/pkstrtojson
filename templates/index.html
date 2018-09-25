@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />   
+    <title>Players Stats</title>      
+    <!-- import plugin script -->   
+    <script src='static/Chart.min.js'></script>   
+  </head>
+  <body>
+    <h1>Flask Chart.js</h1>
+    <!-- bar chart canvas element -->
+    {% for player, infos in data.items() %}
+    <div style="width:450px; height:350px; border-style:solid; border-width:1px; border-color:black; float:left">
+      <p>{{player}}</p>
+      <canvas id="canvas{{loop.index}}"></canvas>
+    </div>
+    <!--<canvas id="canvas{{loop.index}}" width="100px" height="100px"></canvas>-->
+    <script>
+      var labels = []
+      var data = []
+      var colors = []
+      {% for k,v in infos.items() %}
+        labels.push("{{k}}")
+        data.push({{v|round(2)}})
+        {% if k == 'af' %}
+          colors.push("rgb(152,152,0)")
+        {% elif k == 'pfr' %}
+          colors.push("rgb(102,0,0)")
+        {% elif k == 'vpip' %}
+          colors.push("rgb(51,102,0)")
+        {% else %}
+          colors.push("rgb(180,180,180)")
+        {% endif %}
+      {% endfor %}
+
+      new Chart(document.getElementById("canvas{{loop.index}}"),{"type":"doughnut","data":{"labels":labels,"datasets":[{"labels":"Player_canvas","data":data,"backgroundColor":colors}]},"options":{"legend":{"display":false}},"title":{"display":true,"text":"{{player}}"}})
+      //new Chart(document.getElementById("canvas{{loop.index}}"),{"type":"doughnut","data":{"labels":labels,"datasets":[{"labels":"Player_canvas","data":data,"backgroundColor":["rgb(0,200,200)","rgb(180,0,0)","rgb(150,150,150)","rgb(0,180,0)","rgb(150,150,150)"]}]},"options":{"legend":{"display":false}}})
+    </script>
+    <!--<p>
+      <a>{{player}}</a></br>
+      <a>{{infos}}</a>
+    </p>-->
+    {% endfor %}
+  </body>
+</html>

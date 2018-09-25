@@ -20,12 +20,18 @@ class Player:
             self.call_pre += 1
 
     def get_vpip(self):
-        self.vpip = (self.raise_pre + self.call_pre) / self.walks
-        return self.vpip
+        if self.walks > 0:
+            self.vpip = (self.raise_pre + self.call_pre) / self.walks
+            return self.vpip
+        else:
+            return 0
 
     def get_pfr(self):
-        self.pfr = self.raise_pre / self.walks
-        return self.pfr
+        if self.walks > 0:
+            self.pfr = self.raise_pre / self.walks
+            return self.pfr
+        else:
+            return 0
 
     def get_af(self):
         pass

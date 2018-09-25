@@ -4,22 +4,24 @@ from pymongo import MongoClient
 from pymongo.collection import Collection
 from settings import Settings
 from player import Player
+from datetime import datetime
+from collections import OrderedDict
 
 class Pokerstarsgame:
-    def __init__(self, gamelog, game=None, game_filename=None):
+    def __init__(self, gamelog, game=None):
         """
         gamelog parameter is an array with element beeing lines
         of the logs file
         game parameter is the name of the game. Optionnal or set on
         object creation
-        game_filename is the name of the gamefile. Optionnal or
-        set on object creation. will parse the name from the filename
         """
         regex_gameid = re.compile(r'^.*Tournament #(\d+),.*$')
+        regex_cash = re.compile(r'^.*Stars Hand #\d+:.*$')
         self.gamelog = gamelog
         self.hands = []
         self.hands_id = []
         self.players = {} # player objects
+        self.player_list = []
         self.init_mongo = False
         if re.match(r'^.*\$([\d\.]+)\+\$([\d\.]+) USD.*$', gamelog[0]):
             price = re.search(r'^.*\$([\d\.]+)\+\$([\d\.]+) USD.*$',
@@ -29,13 +31,19 @@ class Pokerstarsgame:
             self.game_price = 0.0
         if game is not None:
             self.game_id = game
-        elif game_filename is not None:
-            game_id = re.search(r'^.*(T\d+).*$', game_filename).group(1)
-            self.game_id = game_id
+        #elif game_filename is not None:
+        #    game_id = re.search(r'^.*(T\d+).*$', game_filename).group(1)
+        #    self.game_id = game_id
         elif re.match(regex_gameid, self.gamelog[0]):
-            self.game_id = 'T' + str(re.search(regex_gameid, gamelog[0]).group(1))
+            self.game_id = str(re.search(regex_gameid, gamelog[0]).group(1))
+        elif re.match(regex_cash, self.gamelog[0]):
+            self.game_id = str(re.search(r'^Table \'(\w+)\' (\d-max).*$',
+                               gamelog[1]).group(1))
+            self.game_id = self.game_id + datetime.today().strftime('%Y%m%d')
         else:
-            raise NameError("game name is not readable or not set properly")
+            self.game_id = ''.join([datetime.today().strftime('%Y%m%d'),'othergame'])
+        #else:
+        #    raise NameError("game name is not readable or not set properly")
         self.check = re.compile(r'^(.*): (checks)\s+$')
         self.bet = re.compile(r'^(.*): (bets) (\d+)$')
         self.fold = re.compile(r'^(.*): (folds)\s+$')
@@ -64,23 +72,23 @@ class Pokerstarsgame:
         parse_hand['players'] = []
         while re.search(r'^Seat \d:.*$', log[i]):
             player = {}
-            p = re.search(r'^.* ?(\d): (.*) \((\d+).*$', log[i])
+            p = re.search(r'^.* ?(\d): (.*) \(\$?(\d+).*$', log[i])
             player['name'] = p.group(2)
             player['stack'] = p.group(3)
             player['seat'] = p.group(1)
             parse_hand['players'].append(player)
             i += 1
         # store player list
-        player_list = [p['name'] for p in parse_hand['players']]
+        self.player_list = [p['name'] for p in parse_hand['players']]
         # update player object list if needed or create it
-        for p in player_list:
+        for p in self.player_list:
             if not p in self.players.keys():
                 self.players[p] = Player(p)
         # parsing deal action
         # blinds
         parse_hand['ante'] = []
         while re.search(r'^.*posts.*$', log[i]):
-            blind = re.search(r'^(.*): posts ([a-z ]+) (\d+).*$', log[i])
+            blind = re.search(r'^(.*): posts ([a-z ]+) \$?(\d+).*$', log[i])
             blind_type = 'ante'
             if blind.group(2) == 'big blind':
                 blind_type = 'bb'
@@ -106,7 +114,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             preflop.append(log[i])
             i += 1
-        parse_hand['preflop'] = self._parse_action('preflop', preflop, len(player_list))
+        parse_hand['preflop'] = self._parse_action('preflop', preflop, len(self.player_list))
 
         # parsing FLOP
         try:
@@ -120,7 +128,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             flop.append(log[i])
             i += 1
-        parse_hand['flop'] = self._parse_action('flop', flop, len(player_list))
+        parse_hand['flop'] = self._parse_action('flop', flop, len(self.player_list))
         parse_hand['flop'].append({'card': dealt_cards})
 
         # parsing TURN
@@ -135,7 +143,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             turn.append(log[i])
             i += 1
-        parse_hand['turn'] = self._parse_action('turn', turn, len(player_list))
+        parse_hand['turn'] = self._parse_action('turn', turn, len(self.player_list))
         parse_hand['turn'].append({'card': turn_card})
 
         # parsing RIVER
@@ -150,7 +158,7 @@ class Pokerstarsgame:
         while not re.search(r'^\*\*\*.*\*\*\*.*$', log[i]):
             river.append(log[i])
             i += 1
-        parse_hand['river'] = self._parse_action('river', river, len(player_list))
+        parse_hand['river'] = self._parse_action('river', river, len(self.player_list))
         parse_hand['river'].append({'card': river_card})
 
         # parsing SHOWDOWN
@@ -239,6 +247,7 @@ class Pokerstarsgame:
                 f = re.search(self.fold, action)
                 act['player'] = f.group(1)
                 act['action'] = f.group(2)
+                self.players[f.group(1)].update('fold', action_name)
             elif re.match(self.rais, action):
                 f = re.search(self.rais, action)
                 act['player'] = f.group(1)
@@ -350,12 +359,32 @@ class Pokerstarsgame:
         return len(self.hands)
 
     def get_players_infos(self):
-        r = {}
+        r = OrderedDict()
         for name, obj in self.players.items():
             pfr = obj.get_pfr() * 100
             vpip = obj.get_vpip() * 100
-            r[name] = {'pfr': '{:.2f}'.format(pfr),
-                       'vpip': '{:.2f}'.format(vpip)}
+            r[name] = OrderedDict()
+            r[name]['pfr'] = pfr
+            r[name]['npfr'] = 100 - pfr
+            r[name]['vpip'] = vpip
+            r[name]['nvpip'] = 100 - vpip
+            r[name]['af'] = 100
+        return r
+
+    def get_last_hand_stats(self):
+        r = OrderedDict()
+        for name, obj in self.players.items():
+            if name in self.player_list:
+                pfr = obj.get_pfr() * 100
+                vpip = obj.get_vpip() * 100
+                #r[name] = {'pfr': '{:.2f}'.format(pfr),
+                #           'vpip': '{:.2f}'.format(vpip)}
+                r[name] = OrderedDict()
+                r[name]['pfr'] = pfr
+                r[name]['npfr'] = 100 - pfr
+                r[name]['vpip'] = vpip
+                r[name]['nvpip'] = 100 - vpip
+                r[name]['af'] = 100
         return r
 
     def get_game_infos(self, out_json=True):

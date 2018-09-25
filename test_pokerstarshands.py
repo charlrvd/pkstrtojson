@@ -18,7 +18,7 @@ fl.closed
 
 gamelist = [x for x in lines.split('\n')]
 
-game = Pokerstarsgame(gamelist, game_filename=gamefile)
+game = Pokerstarsgame(gamelist)
 
 game.generate_hands()
 
